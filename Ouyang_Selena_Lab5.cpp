@@ -26,26 +26,25 @@ int main()
 	
 	//switch to output calories burned based on activity
 	switch (activity) {
-	    
 	//If the input is 'A', then user inputs duration and the calories burned will be output
 	case 'A':
 	    cout << "Enter duration of activity in minutes:" << endl;
 	    cin >> duration;
 	    cout << "Total calories burned: " << fixed << setprecision (0) << (duration*(walkingSlowlyMET*3.5*weight)/200) << endl; //Calculation of total calories burned
-    break;
+    	    break;
     
 	//If the input is 'A', then user inputs duration and the calories burned will be output
-    case 'B':
-        cout << "Walking Quickly" << endl; //Tells user to input mins they spent walking quickly
+   	case 'B':
+            cout << "Walking Quickly" << endl; //Tells user to input mins they spent walking quickly
 	    cin >> duration;
-	    cout << "Total calories burned: " << fixed << setprecision (0) << (duration*(walkingQuicklyMET*3.5*weight)/200) << endl; //Calculation of total calories burned
+	    cout << "Total calories burned: " << (duration*(walkingQuicklyMET*3.5*weight)/200) << endl; //Calculation of total calories burned
 	    break;
 	    
 	//If the input is 'A', then user inputs duration and the calories burned will be output    
 	case 'C':
 	    cout << "Jogging" << endl; //Tells user to input mins they spent jogging
 	    cin >> duration;
-	    cout << "Total calories burned: " << fixed << setprecision (0) << (duration*(walkingSlowlyMET*3.5*weight)/200) << endl; //Calculation of total calories burned
+	    cout << "Total calories burned: " << (duration*(walkingSlowlyMET*3.5*weight)/200) << endl; //Calculation of total calories burned
 	    break;
 	    
 	//If input does not match the cases, then this would be outputted 
@@ -62,8 +61,7 @@ int main()
 	    cin >> activity;
 	
 	//switch to output duration needed to reach calorie goal
-	    switch (activity) {
-	    
+	switch (activity) {	    
 	//If input is 'A', then duration required in minutes is output 
 	case 'A':
 	    cout << ".____________________________________________________." << endl;
@@ -72,10 +70,10 @@ int main()
 	    break;
     
     //If input is 'B', then duration required in minutes is output 
-    case 'B':
-        cout << ".____________________________________________________." << endl;
-        cout << "Duration needed: " << burnCalories/((walkingQuicklyMET*3.5*weight)/200) << " minutes" << endl; //Calculation of total calories burned
-        cout << ".____________________________________________________." << endl;
+    	case 'B':
+            cout << ".____________________________________________________." << endl;
+            cout << "Duration needed: " << burnCalories/((walkingQuicklyMET*3.5*weight)/200) << " minutes" << endl; //Calculation of total calories burned
+            cout << ".____________________________________________________." << endl;
 	    break;
 	    
 	//If input is 'C', then duration required in minutes is output    
