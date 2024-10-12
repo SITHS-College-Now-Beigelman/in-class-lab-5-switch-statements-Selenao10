@@ -1,9 +1,8 @@
 //Selena Ouyang
-//Lab 5 Part 3 II
+//Lab 5 part 3 II
 //10-12-2024
 
 #include <iostream>
-#include <iomanip>
 #include <cstdlib>
 #include <ctime>
 
@@ -11,62 +10,62 @@ using namespace std;
 
 int main()
 {
+	
+//variables
+  int direction; 
+  int trials;
+  int averageMoves;	
+	
+  int totalMoves = 0; //startinf value of total moves
+	
+  srand(time(0)); //random number generator
+  
+  for (trials = 0; trials < 10; trials++) { //runs 10 trials
+	
+    int positionNorth = 0; //starting value of position north
+    int positionEast = 0; //starting value of position east
+    int numMoves = 0; //starting value of number of moves
 
-	int numMoves; //set number of moves to 0
-	int direction; //integer corresponding to direction
-	int positionNS = 0; //starting value of position in North or South
-	int positionEW = 0; //starting value of position in East or West
+    while (positionEast != 2 || positionNorth != 3) //while position is not 2 blocks east and 3 blocks north
+    {
+      numMoves++; //increments by one
+	    
+      direction = rand() % 4 + 1; //random number from 1-4
 
-	//while number of moves is not equal to 25, the code runs
-	srand(time(0)); //makes sure different random numbers are generated each time
+      if (direction == 1) //if random number is 1
+        positionNorth++; //increment position north by 1
 
-	while (positionEW != 2 || positionNS != 3) //while the position is not 2 blocks east and 3 blocks north, code runs
-	{
-		numMoves ++; //increases the number of moves by one
+      if (direction == 2) //if random number is 2
+        positionNorth--; //decrement position north by 1 
 
-		direction = rand() % 4 + 1; //the variable direction is randomly chosen from 1-4
+      if (direction == 3) //if random number is 3
+        positionEast++; //increment position East by 1
 
-		//switch to increase or decrease value of position
-		switch (direction) {
-		//if the random input direction is 1,
-		case 1:
-			positionNS++; //add one to value corresponding to position north or south
-			break;
-		//if the random input direction is 2,
-		case 2:
-			positionNS--; //subtracts one from value corresponding to position north or south
-			break;
-		//if the random input direction is 3,
-		case 3:
-			positionEW++; //adds one to the value corresponging to poisition East or West
-			break;
-		//if the random input direction is 3
-		case 4:
-			positionEW--; //subtracts one to value corresponding to position East or West
-			break;
-		}
+      if (direction == 4)//if random number is 4
+        positionEast--; //decrement position East by 1
+    }
 
+    cout << "Number of Moves: " << numMoves << endl; //display number of moves for each trial
+     int totalMoves = 0; 
+	totalMoves += numMoves; //adds the num of moves for this trial to the total moves
+  }
 
-	}
+  averageMoves = totalMoves / 10; //calculation for average moves
+  cout << "Average number of moves: " << averageMoves;
 
-	//displays number of moves it took to reach 2 blocks east and 3 blocks north
-	cout << "Number of Moves: " << numMoves;
-	return 0;
+  return 0;
 }
 
 /*
-Extra Credit: Run code ten times to find the average number of moves robot takes to reach destination
-
-1. Number of Moves: 88307
-2. Number of Moves: 2637129
-3. Number of Moves: 640563
-4. Number of Moves: 73975
-5. Number of Moves: 73733
-6. Number of Moves: 4147
-7. Number of Moves: 241
-8. Number of Moves: 75905
-9. Number of Moves: 55
-10. Number of Moves: 153
-Average = 359420.8
-Average Number of Moves:  = 359421
+Number of Moves: 262633
+Number of Moves: 35675
+Number of Moves: 265
+Number of Moves: 34975
+Number of Moves: 1479
+Number of Moves: 2139
+Number of Moves: 1019
+Number of Moves: 2277
+Number of Moves: 1865
+Number of Moves: 773
+Average Number of Moves: 34310
 */
