@@ -16,7 +16,7 @@ int main()
 	int duration; //minutes user spent on activity
 	int weight; //User weight
 	int burnCalories; //Amount of calories that the user wants to burn
-  char activity; //Letter corresponding to type of activity
+  	char activity; //Letter corresponding to type of activity
 
 
 	cout << "Enter weight in kilograms. \n" ; //Direction for user to input weight in kg
