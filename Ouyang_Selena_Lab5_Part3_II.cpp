@@ -54,6 +54,7 @@ int main()
   cout << "Average number of moves: " << averageMoves;
 
   return 0;
+	
 }
 
 /*
