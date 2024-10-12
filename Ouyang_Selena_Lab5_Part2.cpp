@@ -19,7 +19,7 @@ int main ()
 	cout << "Enter number of gigabytes in your monthly hotpsot plan." << endl; //Ask the user to input the number of gigabytes in their monthly hotspot plan
 	cin >> NumGigabytes;
 	cout << "Enter the desired quality. '1' for low-quality, '2' for normal-quality, '3' for high-quality."  << endl; //Directions for user to enter corresponding quality number
-    cin >> quality;	
+    	cin >> quality;	
 	cout << fixed << setprecision(0); //set precision for floating points to 0
 	
 	//switches case to output hours available for streaming
@@ -28,16 +28,16 @@ int main ()
 	case 1:
 		cout << "You can strean low-quality music for " << NumGigabytes/gblowquality << " hours each month." << endl; //Prints hours available for low quality streaming each month
         break;
-    //if user inputs 1, then number of hours available outputs    
+    	//if user inputs 1, then number of hours available outputs    
 	case 2:
 		cout << "You can stream normal-quality music for " << NumGigabytes/gbnormalquality << " hours each month." << endl;  //Prints hours available for normal quality streaming each month
         break;
-    //if user inputs 1, then number of hours available outputs    
-    case 3:
+    	//if user inputs 1, then number of hours available outputs    
+    	case 3:
 		cout << "You can stream high-quality music for " << NumGigabytes/gbhighquality << " hours each month." << endl; //Prints hours available for high quality streaming each month
         break;
-    //if user input does not match any of the cases then this outputs
-    default:
+    	//if user input does not match any of the cases then this outputs
+   	 default:
         cout << "Invalid quality.";
         break;
 	}
