@@ -18,49 +18,47 @@ int main()
   int positionEW = 0; //starting value of position in East or West
   
   //while number of moves is not equal to 25, the code runs
-  srand(time(0)); //
-  while (numMoves != 25) 
+  srand(time(0)); //makes sure different random numbers are generated each time
+  while (numMoves != 25) //while the number of moves is less than 25, run code
   {
-    
-      
     numMoves ++; //increases the number of moves by one
     
-  
     direction = rand() % 4 + 1; //the variable direction is randomly chosen from 1-4
     
     //switch to increase or decrease value of position
     switch (direction) {
-    
-    
-    case 1:
-        
-      positionNS++;
+    //if the random input direction is 1,
+    case 1:      
+      positionNS++; //add one to value corresponding to position north or south
       break;
-      
+    //if the random input direction is 2,
     case 2:
-      positionNS--;
+      positionNS--; //subtracts one from value corresponding to position north or south
       break;
-      
+    //if the random input direction is 3,
     case 3:
-      positionEW++;
+      positionEW++; //adds one to the value corresponging to poisition East or West
       break;
-      
+    //if the random input direction is 3  
     case 4:
-      positionEW--;
+      positionEW--; //subtracts one to value corresponding to position East or West
       break;
     }
-    
+      
+  //if the value corresponding to position north or south is greater than 0, code runs  
   if (positionNS > 0) 
-    cout << "The robot is " << positionNS << " block(s) North and ";
+    cout << "The robot is " << positionNS << " block(s) North and "; //Displays position north
+  //else
   else
-    cout << "The robot is " << -positionNS << " block(s) South and ";
+    cout << "The robot is " << -positionNS << " block(s) South and "; //Displays postion South
 
+  //if the value corresponding to position East or west is greater than 0, code runs
   if (positionEW > 0)
-    cout << positionEW << " block(s) East." << endl;
+    cout << positionEW << " block(s) East." << endl; //displays position east
   else 
-    cout << -positionEW << " block(s) West." << endl;
+    cout << -positionEW << " block(s) West." << endl;//displays position west
   }
-
+  
   return 0;
 }
 
@@ -90,4 +88,4 @@ The robot is 2 block(s) North and 0 block(s) West.
 The robot is 3 block(s) North and 0 block(s) West.
 The robot is 2 block(s) North and 0 block(s) West.
 The robot is 2 block(s) North and 1 block(s) East.
-*/
+*/ 
