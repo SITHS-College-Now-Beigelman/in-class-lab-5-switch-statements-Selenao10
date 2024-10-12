@@ -19,7 +19,8 @@ int main()
 
 	//while number of moves is not equal to 25, the code runs
 	srand(time(0)); //makes sure different random numbers are generated each time
-	while (positionEW != 2 || positionEW != 3) //while the number of moves is less than 25, run code
+
+	while (positionEW != 2 || positionNS != 3) //while the position is not 2 blocks east and 3 blocks north, code runs
 	{
 		numMoves ++; //increases the number of moves by one
 
@@ -47,7 +48,7 @@ int main()
 
 
 	}
-	
+
 	//displays number of moves it took to reach 2 blocks east and 3 blocks north
 	cout << "Number of Moves: " << numMoves;
 	return 0;
@@ -56,15 +57,16 @@ int main()
 /*
 Extra Credit: Run code ten times to find the average number of moves robot takes to reach destination
 
-1. Number of Moves: 48
-2. Number of Moves: 7
-3. Number of Moves: 170
-4. Number of Moves: 51
-5. Number of Moves: 2
-6. Number of Moves: 18
-7. Number of Moves: 73882
-8. Number of Moves: 204
-9. Number of Moves: 2
-10, 
-
+1. Number of Moves: 88307
+2. Number of Moves: 2637129
+3. Number of Moves: 640563
+4. Number of Moves: 73975
+5. Number of Moves: 73733
+6. Number of Moves: 4147
+7. Number of Moves: 241
+8. Number of Moves: 75905
+9. Number of Moves: 55
+10. Number of Moves: 153
+Average = 359420.8
+Average Number of Moves:  = 359421
 */
