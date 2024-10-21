@@ -11,20 +11,20 @@ using namespace std;
 
 int main() 
 {
-    
-  int numMoves; //set number of moves to 0
+
+  int numMoves = 0; //set number of moves to 0
   int direction; //integer corresponding to direction
   int positionNS = 0; //starting value of position in North or South
   int positionEW = 0; //starting value of position in East or West
-  
+
   //while number of moves is not equal to 25, the code runs
   srand(time(0)); //makes sure different random numbers are generated each time
-  while (numMoves != 25) //while the number of moves is less than 25, run code
+  while (numMoves != 25) //while the number of moves is less than 25 run code
   {
     numMoves ++; //increases the number of moves by one
-    
+
     direction = rand() % 4 + 1; //the variable direction is randomly chosen from 1-4
-    
+
     //switch to increase or decrease value of position
     switch (direction) {
     //if the random input direction is 1,
@@ -44,7 +44,7 @@ int main()
       positionEW--; //subtracts one to value corresponding to position East or West
       break;
     }
-      
+
   //if the value corresponding to position north or south is greater than 0, code runs  
   if (positionNS > 0) 
     cout << "The robot is " << positionNS << " block(s) North and "; //Displays position north
@@ -58,7 +58,7 @@ int main()
   else 
     cout << -positionEW << " block(s) West." << endl;//displays position west
   }
-  
+
   return 0;
 }
 
